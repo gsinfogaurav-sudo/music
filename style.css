@@ -1,0 +1,171 @@
+/*
+ * Stylesheet for the Kids Music Learning App
+ *
+ * This stylesheet focuses on high-contrast colors, large touch targets,
+ * and simple layouts to make the interface friendly and accessible for
+ * young learners. It follows design guidelines that recommend using
+ * large fonts, straightforward language, and minimal visual clutter.
+ */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #faf8f0;
+  color: #333333;
+  text-align: center;
+}
+
+header {
+  background-color: #fce4ec;
+  padding: 10px 0;
+}
+
+.header-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin: 10px 0 5px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 6px 0;
+}
+
+/* Menu and navigation buttons */
+.menu-btn,
+.back-btn {
+  background-color: #ff9800;
+  color: #ffffff;
+  border: none;
+  padding: 16px 24px;
+  margin: 10px;
+  font-size: 1.4rem;
+  border-radius: 10px;
+  cursor: pointer;
+  min-width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.menu-btn:hover,
+.back-btn:hover {
+  background-color: #f57c00;
+}
+
+.menu-btn:active,
+.back-btn:active {
+  transform: scale(0.97);
+}
+
+/* Hide elements using the hidden class */
+.hidden {
+  display: none;
+}
+
+/* Keyboard container layout */
+.keyboard {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Base style for individual keys */
+.key {
+  width: 80px;
+  height: 160px;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #ffffff;
+  user-select: none;
+  cursor: pointer;
+  padding-bottom: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.1s;
+}
+
+.key:active {
+  transform: scale(0.96);
+}
+
+/* Key highlight states for game feedback */
+.key.correct {
+  background-color: #c8e6c9 !important;
+  color: #2e7d32 !important;
+}
+
+.key.wrong {
+  background-color: #ffcccb !important;
+  color: #b71c1c !important;
+}
+
+/* Selected state for chord building */
+.key.selected {
+  outline: 4px solid #ffd54f;
+  outline-offset: -2px;
+}
+
+/* Highlight state for scale practice (correct note) */
+/* Highlight state for scale practice: outline in bright yellow to
+   clearly indicate the next note in the scale. Using a distinct color
+   ensures it is visible on all key backgrounds. */
+.key.scale-highlight {
+  outline: 4px solid #ffeb3b;
+  outline-offset: -2px;
+}
+
+/* Interval trainer highlights */
+/* Root note in interval game: dashed border for clarity */
+.key.interval-root {
+  border: 4px dashed #7b1fa2;
+  border-radius: 10px;
+}
+
+/* Buttons container for time signature game */
+.note-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Individual note duration buttons */
+.note-btn {
+  background-color: #bbdefb;
+  color: #1a237e;
+  border: none;
+  padding: 14px 18px;
+  margin: 4px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  min-width: 120px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s, transform 0.1s;
+}
+.note-btn:hover {
+  background-color: #90caf9;
+}
+.note-btn:active {
+  transform: scale(0.96);
+}
+
+/* Feedback text styling */
+#feedback {
+  font-size: 1.3rem;
+  font-weight: bold;
+  min-height: 30px;
+  margin-top: 10px;
+}

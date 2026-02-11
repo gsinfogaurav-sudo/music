@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kids Music Learning App</title>
+  <!-- Link the stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <!-- Decorative image at the top of the app -->
+    <img src="assets/header.png" alt="Cheerful musical illustration" class="header-img">
+    <h1>Kids Music Learning</h1>
+    <p id="instruction">Choose a mode to start learning!</p>
+  </header>
+
+  <!-- Main menu with mode selection -->
+  <main id="main-menu">
+    <button id="btn-free-play" class="menu-btn">Free&nbsp;Play</button>
+    <button id="btn-note-game" class="menu-btn">Note&nbsp;Match&nbsp;Game</button>
+    <button id="btn-chords-game" class="menu-btn">Chord&nbsp;Builder</button>
+    <button id="btn-scales-game" class="menu-btn">Scale&nbsp;Practice</button>
+    <!-- New advanced concepts buttons -->
+    <button id="btn-interval-game" class="menu-btn">Interval&nbsp;Trainer</button>
+    <button id="btn-time-game" class="menu-btn">Time&nbsp;Signature&nbsp;Challenge</button>
+  </main>
+
+  <!-- Section for free-play piano mode -->
+  <section id="free-play-section" class="hidden">
+    <h2>Free Play</h2>
+    <p>Tap the colorful keys to hear their sounds.</p>
+    <div id="keyboard" class="keyboard"></div>
+    <button class="back-btn">Back to Menu</button>
+  </section>
+
+  <!-- Section for the note matching game -->
+  <section id="note-game-section" class="hidden">
+    <h2>Note Match Game</h2>
+    <p id="note-question">Click the key that matches the note: <span id="note-display"></span></p>
+    <div id="keyboard-game" class="keyboard"></div>
+    <p id="feedback"></p>
+    <p>Score: <span id="score">0</span>/<span id="total-rounds">5</span></p>
+    <button class="back-btn">Back to Menu</button>
+  </section>
+
+  <!-- Section for chord builder game -->
+  <section id="chords-game-section" class="hidden">
+    <h2>Chord Builder Game</h2>
+    <p id="chord-question">Build the chord:</p>
+    <div id="chords-keyboard" class="keyboard"></div>
+    <p id="selected-notes-text">Selected notes: <span id="selected-notes"></span></p>
+    <button id="check-chord" class="menu-btn" style="min-width: 150px;">Submit</button>
+    <p id="chord-feedback"></p>
+    <p>Score: <span id="chord-score">0</span>/<span id="chord-total-rounds">5</span></p>
+    <button class="back-btn">Back to Menu</button>
+  </section>
+
+  <!-- Section for scale practice -->
+  <section id="scales-game-section" class="hidden">
+    <h2>Scale Practice</h2>
+    <p id="scale-question">Play the scale:</p>
+    <div id="scales-keyboard" class="keyboard"></div>
+    <p id="scale-feedback"></p>
+    <p>Score: <span id="scale-score">0</span>/<span id="scale-total-rounds">3</span></p>
+    <button class="back-btn">Back to Menu</button>
+  </section>
+
+  <!-- Section for interval trainer -->
+  <section id="interval-game-section" class="hidden">
+    <h2>Interval Trainer</h2>
+    <p id="interval-question">Select the note that is the interval above the root:</p>
+    <div id="intervals-keyboard" class="keyboard"></div>
+    <p id="interval-feedback"></p>
+    <p>Score: <span id="interval-score">0</span>/<span id="interval-total-rounds">5</span></p>
+    <button class="back-btn">Back to Menu</button>
+  </section>
+
+  <!-- Section for time signature challenge -->
+  <section id="time-game-section" class="hidden">
+    <h2>Time Signature Challenge</h2>
+    <p id="time-question">Build the measure:</p>
+    <div id="time-buttons" class="note-buttons">
+      <button class="note-btn" data-value="4">Whole&nbsp;Note</button>
+      <button class="note-btn" data-value="2">Half&nbsp;Note</button>
+      <button class="note-btn" data-value="1">Quarter&nbsp;Note</button>
+      <button class="note-btn" data-value="0.5">Eighth&nbsp;Note</button>
+    </div>
+    <p id="time-progress">Beats: 0</p>
+    <p id="time-feedback"></p>
+    <p>Score: <span id="time-score">0</span>/<span id="time-total-rounds">5</span></p>
+    <button id="time-reset" class="menu-btn" style="min-width: 140px;">Reset&nbsp;Measure</button>
+    <button class="back-btn">Back to Menu</button>
+  </section>
+
+  <!-- Include the JavaScript for interactivity -->
+  <script src="script.js"></script>
+</body>
+</html>
